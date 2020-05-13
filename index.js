@@ -21,8 +21,8 @@ new Vue({
     y: 0,
   },
   methods: {
-    increase: function() {
-      this.counter++
+    increase: function(step, event) {
+      this.counter += step
     },
     updateCoordinates: function(e){
       this.x = e.clientX
