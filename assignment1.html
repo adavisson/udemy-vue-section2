@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  </head>
+  <body>
+
+    <div id="assignment-1">
+      <p>Vue is pretty cool - {{ name }} ({{ age }})</p>
+      <p>Age * 3 = {{ age * 3 }}</p>
+      <p>Random float: {{ randomNumber() }}</p>
+      <div>
+        <img style="height:100px" v-bind:src="imageLink">
+      </div>
+      <div>
+        <input v-bind:value="name" type="text" v-on:input="changeName">
+      </div>
+    </div>
+
+    <script src="./assignment1.js"></script>
+  </body>
+</html>
