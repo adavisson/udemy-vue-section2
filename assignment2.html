@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+
+    <div id="assignment-2">
+      <div>
+        <button v-on:click="alertMe">Show Alert</button>
+      </div>
+
+      <hr>
+
+      <div>
+        <input type="text" v-on:keydown="value = $event.target.value">
+        <p>{{ value }}</p>
+      </div>
+
+      <hr>
+
+      <div>
+        <input type="text" v-on:keydown.enter="value2 = $event.target.value">
+        <p>{{ value2 }}</p>
+      </div>
+    </div>
+
+    <script src="./assignment2.js"></script>
+  </body>
+</html>
