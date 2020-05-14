@@ -33,3 +33,10 @@ new Vue({
     }
   }
 })
+
+new Vue({
+  el: '#app3',
+  data: {
+    name: 'Andrew',
+  }
+})
