@@ -40,3 +40,23 @@ new Vue({
     name: 'Andrew',
   }
 })
+
+new Vue({
+  el: '#app4',
+  data: {
+    counter: 0,
+    secondCounter: 0,
+  },
+  computed: {
+    output: function() {
+      console.log('computed')
+      return this.counter > 5 ? 'Greater Than 5' : 'Smaller than 5'
+    }
+  },
+  methods: {
+    result: function() {
+      console.log('method')
+      return this.counter > 5 ? 'Greater Than 5' : 'Smaller than 5'
+    }
+  }
+})
