@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 
+<!-- 'v-on:'' can be replaced with '@' -->
+<!-- 'v-bind:' can be replaced with ':' -->
+
 <html>
   <head>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -8,7 +11,7 @@
 
     <div id="app">
       <h1 v-once>{{ title }}</h1>
-      <p>{{ sayHello() }} - <a v-bind:href="link">Google</a></p>
+      <p>{{ sayHello() }} - <a :href="link">Google</a></p>
       <hr>
       <p v-html="finishedLink"></p>
     </div>
@@ -18,7 +21,7 @@
 
     <div id="app2">
       <button v-on:click="increase(2, $event)">Click Me</button>
-      <button v-on:click="counter++">Click Me</button>
+      <button @click="counter++">Click Me</button>
       <p>{{ counter * 2 > 10 ? 'Greater than 10' : 'Smaller than 10' }}</p>
       <p v-on:mousemove="updateCoordinates">
         Coordinates: {{ x }} / {{ y }}
