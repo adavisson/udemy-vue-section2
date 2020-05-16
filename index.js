@@ -48,9 +48,18 @@ new Vue({
     secondCounter: 0,
   },
   computed: {
+    //computed properties always need to run synchronously
     output: function() {
       console.log('computed')
       return this.counter > 5 ? 'Greater Than 5' : 'Smaller than 5'
+    }
+  },
+  watch: {
+    counter: function(value) {
+      let vm = this
+      setTimeout(function() {
+        vm.counter = 0
+      },2000)
     }
   },
   methods: {
