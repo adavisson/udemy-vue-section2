@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<!-- 'v-on:'' can be replaced with '@' -->
+<!-- 'v-on' can be replaced with '@' -->
 <!-- 'v-bind:' can be replaced with ':' -->
 
 <html>
@@ -20,14 +20,14 @@
     <hr>
 
     <div id="app2">
-      <button v-on:click="increase(2, $event)">Click Me</button>
+      <button @click="increase(2, $event)">Click Me</button>
       <button @click="counter++">Click Me</button>
       <p>{{ counter * 2 > 10 ? 'Greater than 10' : 'Smaller than 10' }}</p>
-      <p v-on:mousemove="updateCoordinates">
+      <p @mousemove="updateCoordinates">
         Coordinates: {{ x }} / {{ y }}
-        - <span v-on:mousemove.stop="">DEAD SPOT</span>
+        - <span @mousemove.stop="">DEAD SPOT</span>
       </p>
-      <input type="text" v-on:keyup.enter="alertMe">
+      <input type="text" @keyup.enter="alertMe">
     </div>
 
     <hr>
@@ -42,9 +42,9 @@
     <hr>
 
     <div id="app4">
-      <button v-on:click="counter++">Increase</button>
-      <button v-on:click="counter--">Decrease</button>
-      <button v-on:click="secondCounter++">Increase Second</button>
+      <button @click="counter++">Increase</button>
+      <button @click="counter--">Decrease</button>
+      <button @click="secondCounter++">Increase Second</button>
       <p>Counter: {{ counter }} | {{ secondCounter }}</p>
       <p>Result: {{ result() }} | {{ output }}</p>
     </div>
