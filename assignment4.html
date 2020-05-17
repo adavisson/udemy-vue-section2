@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" text="text/css" href="./assignment4.css" />
+  </head>
+  <body>
+
+    <div id="assignment4">
+      <button @click="startEffect">Start Effect</button>
+      <div id="effect" :class="specialEffect"></div>
+      
+      <hr>
+
+      <div :class="[class1, class2, class3]">I got no class</div>
+
+      <hr>
+
+      <div>
+        <input type="text" v-model="divClass">
+        <div :class="divClass"></div>
+      </div>
+
+      <hr>
+
+      <div>
+        <input type="text" v-model="div2Class">
+        <input type="checkbox" v-model="div2Bool">
+        <div :class="[div2Class, myClass]"></div>
+      </div>
+
+      <hr>
+
+      <div>
+        <input type="text" v-model="color">
+        <div :style="myStyle"></div>
+      </div>
+
+      <hr>
+
+      <div>
+        <button @click="startProgress">Start Progress</button>
+        <div :style="progressBar"></div>
+      </div>
+
+    </div>
+
+    <script src="./assignment4.js"></script>
+  </body>
+</html>
