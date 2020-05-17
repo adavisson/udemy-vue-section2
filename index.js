@@ -69,3 +69,10 @@ new Vue({
     }
   }
 })
+
+new Vue({
+  el: '#app5',
+  data: {
+    attachRed: false,
+  },
+})

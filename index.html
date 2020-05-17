@@ -6,40 +6,40 @@
 <html>
   <head>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" text="text/css" href="./styles.css" />
   </head>
   <body>
-
     <div id="app">
       <h1 v-once>{{ title }}</h1>
       <p>{{ sayHello() }} - <a :href="link">Google</a></p>
-      <hr>
+      <hr />
       <p v-html="finishedLink"></p>
     </div>
 
-    <hr>
-    <hr>
+    <hr />
+    <hr />
 
     <div id="app2">
       <button @click="increase(2, $event)">Click Me</button>
       <button @click="counter++">Click Me</button>
       <p>{{ counter * 2 > 10 ? 'Greater than 10' : 'Smaller than 10' }}</p>
       <p @mousemove="updateCoordinates">
-        Coordinates: {{ x }} / {{ y }}
-        - <span @mousemove.stop="">DEAD SPOT</span>
+        Coordinates: {{ x }} / {{ y }} -
+        <span @mousemove.stop="">DEAD SPOT</span>
       </p>
-      <input type="text" @keyup.enter="alertMe">
+      <input type="text" @keyup.enter="alertMe" />
     </div>
 
-    <hr>
-    <hr>
+    <hr />
+    <hr />
 
     <div id="app3">
-      <input type="text" v-model="name">
+      <input type="text" v-model="name" />
       <p>{{ name }}</p>
     </div>
 
-    <hr>
-    <hr>
+    <hr />
+    <hr />
 
     <div id="app4">
       <button @click="counter++">Increase</button>
@@ -49,6 +49,15 @@
       <p>Result: {{ result() }} | {{ output }}</p>
     </div>
 
-    <script src='./index.js'></script>
+    <hr />
+    <hr />
+
+    <div id="app5">
+      <div class="demo" @click="attachRed = !attachRed" :class="{red: attachRed}"></div>
+      <div class="demo"></div>
+      <div class="demo"></div>
+    </div>
+
+    <script src="./index.js"></script>
   </body>
 </html>
