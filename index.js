@@ -74,5 +74,14 @@ new Vue({
   el: '#app5',
   data: {
     attachRed: false,
+    color: 'green',
   },
+  computed: {
+    divClasses: function() {
+      return {
+        red: this.attachRed,
+        blue: !this.attachRed,
+      }
+    }
+  }
 })
